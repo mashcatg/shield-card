@@ -50,7 +50,41 @@
     <link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/chunk-LFQJWHD6.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/chunk-IZAIFOET.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/chunk-A3IIQ6X3.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/chunk-HZL4YIMB.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/6Z9zJe4n_oPBm87TQgg_eQcsu8Mtb72NKCc8Uj6NUq0.M7HZXIYU.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/chunk-NYJ67JNY.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/chunk-TIH2UI43.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/chunk-WQIRGO3H.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/chunk-T346ZG4Z.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/chunk-URNKCNUT.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/chunk-TVCYNP73.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/chunk-EXUOQDYI.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/chunk-N5LAIOUF.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/chunk-O736CIEA.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/chunk-FKKQFH6Y.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/chunk-V45HT5EA.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/chunk-NCIKHWWD.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/chunk-GQXGHQRP.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/chunk-FB3XFTYD.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/chunk-SZBUTRHD.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/chunk-42U43NKG.mjs"><link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/script_main.6LQK4LDC.mjs"><script type="module" async data-framer-bundle="main" fetchpriority="low" src="https://framerusercontent.com/sites/3dT1sdQrJPGmcrKfePxqik/script_main.6LQK4LDC.mjs"></script><div id="svg-templates" style="position: absolute; overflow: hidden; bottom: 0; left: 0; width: 0; height: 0; z-index: 0; contain: strict" aria-hidden="true">
 </div>
     
-    
+   <style>
+    iframe#__framer-editorbar,
+    .editorBarWrapper_e9jl8lf {
+      display: none !important;
+    }
+  </style>
+  
+  <!-- JavaScript to reinforce hiding -->
+  <script>
+    function hideEditorBar() {
+      // Hide iframe by ID
+      const iframe = document.getElementById('__framer-editorbar');
+      if (iframe) iframe.style.display = 'none';
+  
+      // Hide internal div (editor bar itself)
+      const bar = document.querySelector('.editorBarWrapper_e9jl8lf');
+      if (bar) bar.style.display = 'none';
+    }
+  
+    // Hide on window load
+    window.addEventListener('load', hideEditorBar);
+  
+    // Hide again after short delays (to catch late loads)
+    setTimeout(hideEditorBar, 500);
+    setTimeout(hideEditorBar, 1500);
+  
+    // Observe DOM for re-injection
+    const observer = new MutationObserver(hideEditorBar);
+    observer.observe(document.body, { childList: true, subtree: true });
+  
+    // Also check for hostname match (extra safety)
+    if (window.location.hostname.includes("framer.app") || window.location.hostname.includes("edit.framer.com")) {
+      hideEditorBar();
+    }
+  </script>  
     
 </body>
 </html>
